@@ -1,0 +1,214 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+	<head>
+		<style>
+            .inputType{
+            background-color: #fff;
+            background-image: none;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #d6d4d4;
+            border-left: 0;
+            padding-top: 0;
+            padding-right: 5px;
+            padding-bottom: 0;
+            padding-left: 5px;
+            margin-top: 4px;
+            margin-right: 0;
+            margin-bottom: 4px;
+            margin-left: 0;
+            display: block;
+            width: 406px;
+            box-sizing: border-box;
+            height: 41px;
+            color: #161616;
+            font-size: 14px;
+            overflow: hidden;
+            font-family: open sans;
+            }
+
+
+            .Name{
+            height: auto;
+            display: block;
+            font-family: open sans;
+            font-size: 12px;
+            font-weight: 700;
+            color: #909090;
+            width: 406px;
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 5px;
+            padding-left: 0;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            background-color: transparent;
+            background-image: none;
+            overflow: hidden;
+            vertical-align: top;
+            text-align: left;
+            text-align-last: left;
+            }
+            
+
+		.static {
+			position: sticky;
+			bottom: 91px;
+			right: 0px;
+			width: 550px;
+			height: 500px;
+			float: left;
+            background-color:rgb(255,255,255);
+            overflow-y: auto;
+
+            
+		}
+
+        .Carsegments {
+            margin-left:40px;
+        }
+        
+        </style>
+	
+	</head>
+   
+        
+<body  style="background-color:rgb(234,239,236)">
+    <div class="container static">
+            <div class="form">
+                <div class="form-text">
+                    <h1>Whroom Host</h1>
+                    <!-- <img class="main_img" src="images\Carstata.png"> -->
+                </div>
+                <div class="main-form">
+                    <div class="index php">
+
+                        <div class="Name">
+                            <span>Date</span><br />
+                            <input class="inputType" type="date" name="file" id="adhaar_Booknow">
+                        </div>
+                        <div class="Name">
+                            <span>Buddy name</span><br />
+                            <input class="inputType" type="text" name="name" id="name_Booknow" placeholder="Enter your name">
+                        </div>
+                        <div class="Name">
+                            <span>Contact N`o.</span><br />
+                            <input class="inputType" type="number" name="contact" id="contact_Booknow" placeholder="Enter your contact no.">
+                        </div>
+                        <div class="Name">
+                            <span>Email ID</span><br />
+                            <input class="inputType" type="email" name="email" id="email_Booknow" placeholder="Enter your email ID">
+                        </div>
+
+                        <div class="Name">
+                            <span>Host Location with Address</span><br />
+                            <input class="inputType" name="text" id="host_Booknow" placeholder="your name">
+                        </div>
+                        <label class="language">City</label>
+                        <select name="language" id="language_Booknow">
+                            <option value="javascript" selected>Choose</option>
+                            <option value="javascript">New Delhi</option>
+                            <option value="python">Gurugram</option>
+                            <option value="python">Noida</option>
+                            <option value="python">Ahmedabad</option>
+                            <option value="python">Surat</option>
+                            <option value="python">Gujrat</option>
+                            <option value="python">J&K</option>
+                            <option value="python">Pune</option>
+                            <option value="python">Mumbai</option>
+                            <option value="python">Chennai</option>
+                            <option value="java">Kolkata</option>
+                        </select>
+                        <form>
+                            <div class="Name">
+                                <div class="namechoice">
+                                    <span>Car Segments</span><br>
+                                </div>
+                                <input type="radio" id="hatch_Booknow" name="contact" value="email" />
+                                <label class="Contactchoice1">Hatchback</label>
+                                <input class="Carsegments" type="radio" id="suv_Booknow" name="contact" value="email" />
+                                <label class="Contactchoice1">SUV</label>
+                                <input class="Carsegments" type="radio" id="sedan_Booknow" name="contact" value="email" />
+                                <label class="Contactchoice1">Sedan</label>
+                                <input class="Carsegments" type="radio" id="sedan_Booknow" name="contact" value="email" />
+                                <label class="Contactchoice1">other</label>
+                            </div>
+                        </form>
+
+                        <div class="Name">
+                            <span>Transmission</span><br />
+                            <input type="radio" id="hatch_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">Manual</label>
+                            <input class="Carsegments" type="radio" id="suv_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">Automatic</label>
+                        </div>
+                        <div class="Name">
+                            <span>Car Exterior Images</span><br />
+                            <input class="inputType" type="file" name="datetime" id="return_Booknow">
+                        </div>
+                        <div class="Name">
+                            <span>Car Interior Images</span><br />
+                            <input class="inputType" type="file" name="datetime" id="return_Booknow">
+                        </div>
+                        <div class="Name">
+                            <span>Did you attached your car to any other Platform</span><br />
+                            <input type="radio" id="hatch_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">Yes</label>
+                            <input class="Carsegments" type="radio" id="suv_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">No</label>
+                            <input class="Carsegments" type="radio" id="suv_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">Maybe</label>
+                        </div>
+                        <div class="Name">
+                            <span>If Yes provide the Plateform Name</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div class="Name">
+                            <span>Does your car have Location Tracking Device?</span><br />
+                            <input type="radio" id="hatch_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">Yes</label>
+                            <input class="Carsegments" type="radio" id="suv_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">No</label>
+                            <input class="Carsegments" type="radio" id="suv_Booknow" name="contact" value="email" />
+                            <label class="Contactchoice1">Maybe</label>
+                        </div>
+                        <div class="Name">
+                            <span>Bank Account Number</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div class="Name">
+                            <span>Ifsc Code</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div class="Name">
+                            <span>Bank Name</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div class="Name">
+                            <span>Name in Account</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div class="Name">
+                            <span>Upi id Associated</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div class="Name">
+                            <span>Any Other Query?</span><br />
+                            <input class="inputType" type="text" name="datetime" id="return_Booknow" placeholder="Your answer">
+                        </div>
+                        <div id="butto">
+                            <input type="submit" value="SUBMIT" name="name" id="submit_Booknow">
+                         </div>
+                    </div>
+
+                </div>
+            </div>
+     </div>
+</body>
+</html>

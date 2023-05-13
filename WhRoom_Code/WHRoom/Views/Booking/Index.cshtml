@@ -1,0 +1,164 @@
+﻿
+<h2>Book Here....</h2>  
+<body style="background-color:rgb(234,239,236)">
+  
+    <form id="BookingForm" action="/Booking/SubmitCustomerBooking" method="post" class="form_Color">
+    <div class="container  static">
+      
+                <div>
+                    <span>Name</span>
+                    <br />
+                    <div>
+                @Html.TextBox("Name", null, new {placeholder = "Enter Your Name",required="required", @class= "inputType"})
+                       
+                    </div>
+                  </div>
+
+                <div>
+                    <span>Contact No.</span>
+                    <br />
+                    <div>
+                @Html.TextBox("Contact", null, new { placeholder = "Enter Your Contact Number",@type = "number",@class= "inputType"})
+                      
+                    </div>
+                </div>
+
+                <div>
+                    <span>Email ID</span>
+                    <br />
+                    <div>
+                @Html.TextBox("Email", null, new {placeholder = "Enter Your EmailID",required="required", @class= "inputType"})
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <span>Aadhar Card</span>
+                    <br />
+                    <div>
+                @Html.TextBox("Aadhar", null, new {required="required", @class= "inputType" ,type = "file" })
+                
+                      
+                    </div>
+                </div>
+
+                 <div>
+                    <span>Driving Licence</span>
+                    <br />
+                    <div>
+
+
+                    @Html.TextBox("Driving_Licence", null, new {required="required", @class= "inputType" ,type = "file" })
+                  
+                    </div>
+                </div>
+
+                <div>
+                    <span>Booking Date/Time</span>
+                    <br />
+                    <div>
+                @Html.TextBox("Booking_DateTime", null, new {required="required", @class= "inputType" ,type = "date" })
+                       
+                    </div>
+                </div>
+
+                <div>
+                    <span>Retrun Date/Time</span>
+                    <br />
+                    <div>
+                @Html.TextBox("Retrun_DateTime", null, new {required="required", @class= "inputType" ,type = "date" })
+                    </div>
+                </div>
+
+        <div>
+            <span>Car Segments</span>
+            <br />
+                @Html.DropDownList(
+                "Car_Segments",
+                new List<SelectListItem>
+                {
+                new SelectListItem{ Text="Select", Value = "0" },
+                new SelectListItem{ Text="Hatchback", Value = "1" },
+                new SelectListItem{ Text="SUV", Value = "2" },
+                new SelectListItem{ Text="Sedan", Value = "3" },
+                },
+                new {@class="inputType",id="CarSegmentsId"})
+           
+        </div>
+        <br />
+       <div>
+            <span id="s_hatchback" style="display:none">Select a Car Model-Hatchback</span>
+            <br />
+            @Html.DropDownList("Hatchback", new List<SelectListItem>
+            {
+            new SelectListItem{ Text="Select", Value = "0" },
+            new SelectListItem{ Text="Maruti Baleno", Value = "1" },
+            new SelectListItem{ Text="Hyundai Grand i10", Value = "2" },
+            new SelectListItem{ Text="Maruti Swift", Value = "3" },
+            new SelectListItem{ Text="Maruti Suzuki Auto", Value = "4" },
+            new SelectListItem{ Text="Maruti Suzuki Wagonar", Value = "5" },
+            new SelectListItem{ Text="Tata Tiago", Value = "6" },
+            new SelectListItem{ Text="Hyundai Elite i20", Value = "7" },
+            new SelectListItem{ Text="Tata Altroz", Value = "8" },
+            new SelectListItem{ Text="Hyundai Santro", Value = "9" }
+
+                },
+                new {@class="inputType dropdown", id="HatchbacksId"})
+       </div>
+
+        <br />
+        <div>
+                <span id="s_SUV" style="display:none">Select a Car Model-SUV</span>
+            <br />
+            @Html.DropDownList("SUV", new List<SelectListItem>
+            {
+            new SelectListItem{ Text="Select", Value = "0" },
+            new SelectListItem{ Text="Maruti Breeza", Value = "1" },
+            new SelectListItem{ Text="Maruti Suzuki S-Presso", Value = "2" },
+            new SelectListItem{ Text="Kia Seltos", Value = "3" },
+            new SelectListItem{ Text="Hyundai Creta", Value = "4" },
+            new SelectListItem{ Text="Tata Harrier", Value = "5" },
+            new SelectListItem{ Text="Tata Nexon", Value = "6" },
+
+
+                },
+                new {@class="inputType dropdown" , id="SUVId"})
+        </div>
+       
+        <br />
+        <div>
+                <span id="s_seden" style="display:none">Select a Car Model-Sedan</span>
+            <br />
+            @Html.DropDownList("Sedan", new List<SelectListItem>
+            {
+            new SelectListItem{ Text="Select", Value = "0" },
+            new SelectListItem{ Text="Maruti Swift Dezire", Value = "1" },
+            new SelectListItem{ Text="Tigao", Value = "2" },
+            new SelectListItem{ Text="Honda City", Value = "3" },
+            new SelectListItem{ Text="Verna", Value = "4" },
+            new SelectListItem{ Text="Civic", Value = "5" },
+            new SelectListItem{ Text="Honda Amaze", Value = "6" },
+            new SelectListItem{ Text="Toyota Yaris", Value = "7" },
+            new SelectListItem{ Text="Maruti Suzuki Ciaz", Value = "8" },
+            new SelectListItem{ Text="Maruti Swift Dezire", Value = "9" }
+
+                },
+                new {@class="inputType dropdown" , id="SedanId"})
+        </div>
+        <br />
+            <div class="inputType">
+            <input type="submit" value="Save" name="name" id="submit_Booknow">
+            
+        </div>
+            <div>
+                <span id="msg" style="color:green;" />
+            </div>
+       </div>
+</form>  
+
+	<link href="~/css/Booking.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/Booking.js" type="text/javascript"></script>
+</body>
+
