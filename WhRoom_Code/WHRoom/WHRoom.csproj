@@ -8,13 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="Assets\**" />
+    <Compile Remove="EntityModel\**" />
     <Content Remove="Assets\**" />
+    <Content Remove="EntityModel\**" />
     <EmbeddedResource Remove="Assets\**" />
+    <EmbeddedResource Remove="EntityModel\**" />
     <None Remove="Assets\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="EntityModel\" />
+    <None Remove="EntityModel\**" />
   </ItemGroup>
 
   <ItemGroup>
