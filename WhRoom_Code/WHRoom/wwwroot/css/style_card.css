@@ -1,0 +1,84 @@
+.wh_wrapper {
+  width: 100%;
+  position: relative;
+}
+.wh_arrow {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  z-index: 2;
+}
+.wh_arrow:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wh_arrow:first-child{
+  left: -22px;
+}
+.wh_arrow:last-child{
+  right: -22px;
+}
+.wh_wrapper .wh_carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.wh_carousel::-webkit-scrollbar {
+  display: none;
+}
+.wh_carousel.no-transition {
+  scroll-behavior: auto;
+}
+.wh_carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.wh_carousel.dragging .wh_card {
+  cursor: grab;
+  user-select: none;
+}
+.wh_carousel :where(.wh_card, .img) {
+  display: flex;
+
+}
+.wh_carousel .wh_card {
+  scroll-snap-align: start;
+  
+  list-style: none;
+  
+  cursor: pointer;
+  
+  flex-direction: column;
+  
+}
+
+
+@media screen and (max-width: 900px) {
+  .wh_wrapper .wh_carousel {
+    grid-auto-columns: calc((100% / 2) - 12px);
+    margin-left: 40px;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wh_wrapper .wh_carousel {
+    grid-auto-columns: 100%;
+
+  }
+}

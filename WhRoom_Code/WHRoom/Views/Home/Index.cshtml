@@ -1,471 +1,781 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Rent Self Drive Car | Whroom</title>
 
-
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custome css files -->
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="data/logo/logo.svg" type="image/icon type">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="css/style_card.css">
+	<link rel="stylesheet" href="css/style_all.css">
+	
 </head>
 
+
 <body>
+	<nav class="wh_top">
+		<div class="wh_back_img"></div>
+		<div class="wh_nav_data1"><img src="data/logo/logo.svg"></div>
+		 <img src="img/brezza1.avif" alt="">
+		<div class="wh_bg_text">
+			<h2>Drive Like Your Own</h2>
 
-    <!-- Header section starts-->
-    <div class="header">
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-        <a href="#" class="logo">Whroom</a>
-
-        <nav class="navbar">
-            <a href="#home" >home </a>
-            <a href="#car">cars</a>
-            <a href="#services">services</a>
-            <a href="#faq">FAQ</a>
-            <a href="#">partner</a>
-            <a href="#contact">contact</a>
-            <a href="/Booking/Index">Booking As Customer</a>
-            <a href="/Buddy/Index">Booking As Buddy</a>
-        </nav>
-
-        <div id="login-btn">
-            <button class="btn">login</button>
-            <i class="far fa-user"></i>
-        </div>
-    </div>
-    <!-- Header section ends -->
-    <!-- login form or popup box -->
-
-    <div class="login-form-container">
-        <span class="fas fa-times" id="close-login-form"></span>
-        <div class="form">
-            <p>become a partner & earn with us</p>
-        </div>
-
-    </div>
-
-    <!-- login form ends -->
-    <!-- home section starts -->
-
-    <section class="home" id="home">
-        <h1 class="home-parallax" data-speed="5">rent self drive car</h1>
-        <img class="home-parallax" src="img/header_img.png" alt="">
-        <span class="btn home-parallax" data-speed="7">why whroom ?</span>
-    </section>
-
-    <!-- home section ends -->
-    <!-- why whroom starts section -->
-
-    <section class="icons-container" id="services">
-
-        <div class="icon">
-            <i class="fas fa-home"></i>
-            <div class="content">
-                <h3>home delivery & return</h3>
-                <p>on-time doorstep service at your location</p>
-            </div>
-        </div>
+			<h1 style="font-size:50px">Never Stop Living</h1>
+			<button class="wh_btn1" onclick="document.getElementById('wh_login').style.display='block'">Login</button>
+		</div>
 
-        <div class="icon">
-            <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>
-            <div class="content">
-                <h3>flexible rental</h3>
-                <p>decide whether you'd like to rent <br> a car for an hour, a week, a month <br> or on daily basis</p>
-            </div>
-        </div>
-
-        <div class="icon">
-            <i class="fas fa-car"></i>
-            <div class="content">
-                <h3>well maintained cars</h3>
-                <p>Regular service & maintenance <br> inspected before each trip</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- why whroom ends section -->
-    <!-- why whroom Sanitized section -->
-
-    <section class="icons-sanitize" id="services">
-        <h3>sanitized & safe cars</h3>
-        <div class="icon-box" style>
-            <div class="icons">
-                <i class="fa-solid fa-pump-medical"></i>
-                <div class="content">
-                    <p>internal & external sanitisation</p>
-                </div>
-            </div>
-
-
-
-            <div class="icons">
-                <i class="fa-solid fa-car"></i>
-                <div class="content">
-                    <p>contact-less doorstep delivery</p>
-                </div>
-            </div>
-
-
-
-            <div class="icons">
-                <i class="fa-solid fa-hands-bubbles"></i>
-                <div class="content">
-                    <p>safety & hygiene best practices</p>
-                </div>
-            </div>
-
-
-    </section>
-
-    <!-- why whroom Sanitized section ends -->
-
-
-    <section class="icons-sanitize" id="services">
-        <h3>Featured</h3>
-        <div class="icon-box">
-            <div class="icons">
-                <i class="fa-solid fa-tags"></i>
-                <div class="content">
-                    <span>flat 5% off</span>
-                    <p>for corporate employees</p>
-                    <div class="offer">safe drive with whroom</div>
-                </div>
-            </div>
-
-
-
-            <div class="icons">
-                <i class="fa-solid fa-car"></i>
-                <div class="content">
-                    <span>need a car for few months</span>
-                    <p>minimum 1 month extension anytime</p>
-                    <div class="offer">safe drive with whroom</div>
-                </div>
-            </div>
-
-
-
-            <div class="icons">
-                <i class="fa-solid fa-tags"></i>
-                <div class="content">
-                    <span>flat 10% off</span>
-                    <p>for all users</p>
-                    <div class="offer">safe drive with whroom</div>
-                </div>
-            </div>
-
-
-    </section>
-
-
-    <!-- FAQ section -->
-    <section class="faq" id="faq">
-        <h1 class="heading">FAQ's</h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>What is Whroom?</h3>
-                <p>
-                    Whroom is a self drive car rental service that provides you with all the privacy, fun and convenience
-                    of your own car, without the hassles of owning and maintaining one. We drop and pick-up cars from
-                    your doorstep, so that you can spend time on the more important things. The doorstep drop and
-                    pick-up of cars is our standard way of serving you, and is available throughout the areas served by
-                    us in your own prime location Delhi/NCR and Gurugram.
-                </p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>Am I eligible to use Whroom services?</h3>
-                <p>
-                    To avail Whroom's services, you must be at least 21 years old, and your driving license for "Light
-                    Motor Vehicles" must be at least 2 years old ( at the time of starting the trip ). Driving license
-                    printed on A4 sheet of paper ( original or otherwise ), driving license on Digi locker or
-                    M-Parivaahan app and commercial driving licenses will not be accepted.
-                </p>
-
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>Why Whroom?</h3>
-                <p>
-                    One must never stop travelling, that's why we are providing our customers unlimited Kms with every
-                    booking. Also, why you need to book for full day when you can rent for 8 hours and enjoy your ride.
-                    There is absolutely no limit to the kilometres that you can drive, and you have complete flexibility
-                    of driving the car as much as you want. Whroom Whroom it up!
-                </p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>Which are the areas where I can available Whroom's services?</h3>
-                <p>Delhi NCR : We are covering most parts of Delhi and Gurgaon and some parts of Noida</p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>Restrictions on where to travel?</h3>
-                <p>
-                    Interstate taxes at the state borders are to be borne by the customer. Our cars are equipped with
-                    Fast tag devices for your convenience. The toll charges incurred during your trip will be billed to
-                    you in your invoice.
-                </p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>Is Pickup and Drop available?</h3>
-                <p>
-                    Yes, we provide pickup and drop service at your convenience location. You may also choose different
-                    pickup location. However, this option needs to be chosen while making the booking, before its
-                    confirmed.
-                </p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>What is corporate discount?</h3>
-                <p>
-                    5% Corporate discounts are available to the customers who have ID proof of there existing company.
-                </p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-            <div class="box">
-                <h3>What kind of Cars can I choose from?</h3>
-                <p>We have variety of cars from which you can choose i.e., Hatchback, Sedan, SUV</p>
-                <!-- <a href="#" class="btn">read more</a> -->
-            </div>
-
-
-        </div>
-
-    </section>
-
-    <!-- FAQ section ends -->
-    <!-- car section starts -->
-
-    <section class="car-list-container" id="car">
-        <h3 class="heading">cars available</h3>
-        <div class="wrapper">
-
-            <div class="box">
-                <img src="img/brezza1.avif" alt="">
-                <div class="content">
-                    <span class="cname">maruti</span>
-                    <h3>Breeza</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>2500/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/nexon1.jpg" alt="">
-                <div class="content">
-                    <span class="cname">tata</span>
-                    <h3>nexon</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>2200/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/grand_i10.avif" alt="">
-                <div class="content">
-                    <span class="cname">hyundai</span>
-                    <h3>grand i10</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>1700/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/swift_dzire.avif" alt="">
-                <div class="content">
-                    <span class="cname">maruti</span>
-                    <h3>swift dzire</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>2000/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/swift.avif" alt="">
-                <div class="content">
-                    <span class="cname">maruti</span>
-                    <h3>swift</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>1900/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/Baleno2.webp" alt="">
-                <div class="content">
-                    <span class="cname">maruti</span>
-                    <h3>baleno</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>2000/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/tiago_tata.avif" alt="">
-                <div class="content">
-                    <span class="cname">tata</span>
-                    <h3>tiago</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>1800/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/ertiga.avif" alt="">
-                <div class="content">
-                    <span class="cname">maruti</span>
-                    <h3>ertiga</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>2400/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/grand i10 Nios.avif" alt="">
-                <div class="content">
-                    <span class="cname">hyundai</span>
-                    <h3>grand i10 nios</h3>
-                    <div class="car-details">
-                        <div class="price"><span>price: </span>1800/-</div>
-                        <div class="price"><span>fuel: </span>petrol</div>
-                        <div class="price"><span>transmission: </span>manual</div>
-                        <!-- <div class="price"><span>price: </span>2200/day</div> -->
-                    </div>
-                    <div class="tag">safe drive with whroom</div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-    </section>
-
-    <!-- car section ends -->
-    <!-- Contact section -->
-    <section class="contact" id="contact">
-
-        <h1 class="heading">Contact Us</h1>
-        <div class="row">
-
-            <iframe class="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224567.72022951694!2d76.82493501332394!3d28.423160293725946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1682284894123!5m2!1sen!2sin"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-
-        </div>
-        <br>
-        <div class="box">
-            <h2 style="color:blue;"<a href="#"> <i class="fas fa-phone"></i> +91-844-855-8667 </a><br></h2>
-            <h2 style="color:blue;"<a href="#"> <i class="fas fa-phone"></i> +91-813-096-8130 </a><br></h2>
-            <h2 <a style="text-transform: lowercase;" href="#"> <i class="fas fa-envelope"></i> support@whroom.in</a><br></h2>
-            <h2 <a href="#"> <i class="fas fa-map-marker-alt"></i> Gurugram, india </a></h2>
-        </div>
-
-    </section>
-    <!-- Contact section ends -->
-    <!-- footer section -->
-
-    <div class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="#home"> <i class="fas fa-arrow-right"></i> home </a>
-                <a href="#car"> <i class="fas fa-arrow-right"></i> cars </a>
-                <a href="#services"> <i class="fas fa-arrow-right"></i> services </a>
-                <a href="#faq"> <i class="fas fa-arrow-right"></i> faq </a>
-                <a href="#contact"> <i class="fas fa-arrow-right"></i> contact </a>
-            </div>
-
-            <div class="box">
-                <h3>contact us</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +91-844-855-8667 </a>
-                <a href="#"> <i class="fas fa-phone"></i> +91-813-096-8130 </a>
-                <a style="text-transform: lowercase;" href="#"> <i class="fas fa-envelope"></i> support@whroom.in</a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> Gurugram, india </a>
-
-            </div>
-
-            <div class="box">
-                <h3>social links</h3>
-                <a href="https://www.instagram.com/whroom/" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
-                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- footer section ends -->
-    <!-- Custome javaSCript files -->
-   
-	<script src="~views\scripts\script.js"></script>
+
+
+		<div id="find_car" class="wh_find_modal">
+			<div class="wh_find_modal-content wh_find_animate">
+				<span onclick="document.getElementById('find_car').style.display='none'" class="close_find_page" title="Close Modal">&times;</span>
+				<form class="wh_find" style="margin:auto;max-width:300px">
+					<input type="text" placeholder="Search.." name="search2">
+					<input type="text" placeholder="Search.." name="search2">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+
+			</div>
+
+
+		</div>
+
+
+
+
+		<div class="wh_nav_content" id="wh_nav_icon">
+			<i class="fa fa-close" onclick="closeNav()"></i>
+			<i class="fas fa-user-alt" style="color: orangered;"></i>
+			<i class="fas fa-map-marked-alt" style="color: lightgreen;"></i>
+			<i class="fa fa-language" style="color: blue;"></i>
+
+			<i class="fas fa-angle-double-down down_arrow_nav" onclick="openNav2()"></i>
+		</div>
+
+		<div id="wh_Sidenav2" class="wh_sidenav">
+			<a href="javascript:void(0)" class="wh_closebtn" onclick="closeNav2()">&times;</a>
+			<a href="#"><i class="fas fa-home"></i> Home</a>
+			<a href="#"><i class="fas fa-car"></i> Cars</a>
+			<a href="#"><i class="fas fa-bookmark"></i> Booknow</a>
+			<a href="#"><i class="fas fa-th-large"></i> Services</a>
+			<a href="#"><i class="fas fa-info"></i> FAQ</a>
+		</div>
+
+
+
+		<div class="wh_nav_whatapp" id="wh_nav_what_hid"><a href="https://wa.me/+918448558667?text=I'm%20interested%20in%20your%20car%20for%20rent"><img src="data/other_img/what1.png"></a></div>
+
+		<div class="wh_help_dropdown wh_nav_help" id="wh_nav_help_hid">
+			<button class="wh_help_dropbtn"><i class="fas fa-info"> </i>Help</button>
+			<div class="wh_help_dropdown-content">
+				<a href="tel:+91-844-855-8667"><i class="fa fa-phone"></i> +91-844-855-8667</a>
+				<a href="mailto:support@whroom.in"><i class="fa fa-envelope"></i> support@whroom.in</a>
+				<a href="#help" style="text-align: center;">More</a>
+			</div>
+		</div>
+
+
+		<div class="wh_nav_open" id="wh_nav_hid" onclick="openNav()">☰</div>
+	</nav>
+
+
+
+	<div id="wh_login" class="wh_login_modal">
+		<div class="wh_modal_content wh_animate">
+
+			<div class="wh_imgcontainer">
+				<span onclick="document.getElementById('wh_login').style.display='none'" class="close_login_page" title="Close Modal">&times;</span>
+				<!--uncomment this line if we use user image icon -->
+				<!--<img src="img_avatar2.png" alt="Avatar" class="wh_login_img"> -->
+				<i class="fas fa-user-alt wh_login_img"></i>
+
+				<div class="form_content_login">
+					<div class="wh_login_base1">
+						<div class="wh_login_cont">
+							Login
+						</div>
+						<div class="wh_reg_con" onclick="closelogin()">
+							Sign Up
+						</div>
+					</div>
+					<form action="" class="wh_form_login_page">
+						<div class="wh_form_input_container">
+							<i class="fa fa-envelope wh_form_icon"></i>
+							<input class="wh_form_input_field" type="text" placeholder="Email" name="email">
+						</div>
+
+						<div class="wh_form_input_container">
+							<i class="fa fa-key wh_form_icon"></i>
+							<input class="wh_form_input_field" type="password" placeholder="Password" name="psw">
+						</div>
+
+						<button type="submit" class="wh_form_btn">Login</button>
+
+						<div class="wh_form_input_container">
+							<img src="data/other_img/google.svg" class="wh_social_link">
+							<img src="data/other_img/facebook.svg" class="wh_social_link">
+							<img src="data/other_img/twitter.svg" class="wh_social_link">
+						</div>
+					</form>
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<div id="wh_sign" class="wh_sing_modal">
+		<div class="wh_modal_content wh_animate">
+			<div class="wh_imgcontainer">
+				<!--uncomment this line if we use user image icon -->
+				<!--<img src="img_avatar2.png" alt="Avatar" class="wh_login_img"> -->
+				<i class="fas fa-user-alt wh_login_img"></i>
+
+				<div class="form_content_sing">
+					<div class="wh_login_base1">
+						<div class="wh_login_cont" onclick="openlogin()">
+							Login
+						</div>
+						<div class="wh_reg_con" onclick="closelogin()">
+							Sign Up
+						</div>
+					</div>
+
+					<form>
+						<div class="wh_form_sing_page">
+
+							<input class="wh_inp" type="text" placeholder="Full Name">
+							<input class="wh_inp" type="text" placeholder="Email">
+							<input class="wh_inp" type="text" placeholder="Password">
+							<input class="wh_inp" type="text" placeholder="address">
+
+
+							<input class="wh_inp_btn" type="submit" value="submit">
+						</div>
+
+
+						<div class="wh_form_input_container" style="position: relative; left:8%">
+
+							<img src="data/other_img/google.svg" class="wh_social_link">
+							<img src="data/other_img/facebook.svg" class="wh_social_link">
+							<img src="data/other_img/twitter.svg" class="wh_social_link">
+						</div>
+
+
+
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="tab" hidden>
+		<button class="tablinks wh_opt1" onclick="openCity(event, 'all')" id="defaultOpen">☰</button>
+		<button class="tablinks wh_opt2" onclick="openCity(event, 'road')"><i class="fa fa-road"></i></button>
+		<button class="tablinks wh_opt3" onclick="openCity(event, 'petrol')"><i class='fas fa-gas-pump'></i></button>
+		<button class="tablinks wh_opt4" onclick="openCity(event, 'automatic')"><img src="data/other_img/black_auto.png"></button>
+		<button class="tablinks wh_opt5" onclick="openCity(event, 'cruise')"><i class='fa fa-tachometer'></i></button>
+		<button class="tablinks wh_opt6" onclick="openCity(event, 'luxury')"><i class='fa fa-thumbs-up'></i></button>
+	</div>
+
+	<h1 class="wh_head_word">Cars Available</h1>
+
+	<div class="wh_card_head tabcontent" id="all">
+		<div class="wh_wrapper">
+			<i id="left" class="fa-solid fa-angle-left wh_arrow"></i>
+			<ul class="wh_carousel">
+
+
+				<li class="wh_card">
+					<img src="data/other_img/nexon1.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Nexon<sup>TATA</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+					<p class="wh_card_link_opt wh_hide">Available from 14 May <a href=""><i class="fas fa-map-marker-alt"></i> bangalore</a> </p>
+					<p class="wh_tagline">Safe Drive With Whroom</p>
+				</li>
+
+
+
+				<li class="wh_card">
+					<img src="data/other_img/brezza1.avif" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Breeza<sup>Maruti</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+					<p class="wh_card_link_opt wh_hide">Available from 14 May <a href=""><i class="fas fa-map-marker-alt"></i> bangalore</a> </p>
+					<p class="wh_tagline">Safe Drive With Whroom</p>
+
+				</li>
+
+
+				<li class="wh_card">
+					<img src="data/other_img/grand_i10.avif" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Grand i10<sup>Hyundai</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 4 Seats</span>
+					</p>
+					<hr>
+					<p class="wh_card_link_opt wh_hide">Available from 14 May <a href=""><i class="fas fa-map-marker-alt"></i> Delhi</a> </p>
+					<p class="wh_tagline">Safe Drive With Whroom</p>
+
+				</li>
+			</ul>
+			<i id="right" class="fa-solid fa-angle-right wh_arrow"></i>
+		</div>
+	</div>
+
+
+
+
+
+	<div id="road" class="tabcontent" hidden>
+		<h3>Road Trip</h3>
+
+	</div>
+	<div id="petrol" class="tabcontent" hidden>
+		<h3>Petrol</h3>
+
+	</div>
+	<div id="automatic" class="tabcontent" hidden>
+		<h3>Automatic</h3>
+
+	</div>
+	<div id="cruise" class="tabcontent" hidden>
+		<h3>Cruise Control Cars</h3>
+
+	</div>
+	<div id="luxury" class="tabcontent" hidden>
+		<h3>Luxury Car</h3>
+
+	</div>
+
+
+
+	<section class="icons-container" id="services">
+
+		<div class="icon">
+			<i class="fas fa-home"></i>
+			<div class="content">
+				<h3>home delivery & return</h3>
+				<p>on-time doorstep service at your location</p>
+			</div>
+		</div>
+
+		<div class="icon">
+			<i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>
+			<div class="content">
+				<h3>flexible rental</h3>
+				<p>decide whether you'd like to rent <br> a car for an hour, a week, a month <br> or on daily basis</p>
+			</div>
+		</div>
+
+		<div class="icon">
+			<i class="fas fa-car"></i>
+			<div class="content">
+				<h3>well maintained cars</h3>
+				<p>Regular service & maintenance <br> inspected before each trip</p>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- why whroom Sanitized section -->
+
+	<section class="icons-sanitize" id="services">
+		<h3>sanitized & safe cars</h3>
+		<div class="icon-box">
+			<div class="icons">
+				<i class="fa-solid fa-pump-medical"></i>
+				<div class="content">
+					<p>internal & external sanitisation</p>
+				</div>
+			</div>
+
+
+
+			<div class="icons">
+				<i class="fa-solid fa-car"></i>
+				<div class="content">
+					<p>contact-less doorstep delivery</p>
+				</div>
+			</div>
+
+
+
+			<div class="icons">
+				<i class="fa-solid fa-hands-bubbles"></i>
+				<div class="content">
+					<p>safety & hygiene best practices</p>
+				</div>
+			</div>
+
+
+	</section>
+
+
+
+	<section class="icons-sanitize" id="services">
+		<h3>Featured</h3>
+		<div class="icon-box">
+			<div class="icons">
+				<i class="fa-solid fa-tags"></i>
+				<div class="content">
+					<span>flat 5% off</span>
+					<p>for corporate employees</p>
+					<div class="offer">safe drive with whroom</div>
+				</div>
+			</div>
+
+
+
+			<div class="icons">
+				<i class="fa-solid fa-car"></i>
+				<div class="content">
+					<span>need a car for few months</span>
+					<p>minimum 1 month extension anytime</p>
+					<div class="offer">safe drive with whroom</div>
+				</div>
+			</div>
+
+
+
+			<div class="icons">
+				<i class="fa-solid fa-tags"></i>
+				<div class="content">
+					<span>flat 10% off</span>
+					<p>for all users</p>
+					<div class="offer">safe drive with whroom</div>
+				</div>
+			</div>
+
+
+	</section>
+
+
+
+
+
+
+
+	<i class="fas fa-comment-dots wh_chat_open_button" onclick="openchatform()"></i>
+
+
+	<div class="wh_chat_form_popup" id="chatForm">
+		<form class="wh_chat_form_container">
+			<h1>Chat</h1>
+
+			<label for="msg"><b>Message</b></label>
+			<div class="wh_chat_out"></div>
+			<textarea placeholder="Type message.." name="msg" required></textarea>
+
+			<button type="submit" class="wh_chat_btn">Send <i class="fas fa-send"></i></button>
+			<button type="button" class="wh_chat_btn wh_chat_cancel" onclick="closechatform()">Close</button>
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<button class="wh_infolink" onclick="openPage('service', this, 'red')"> ☰ Services</button>
+	<button class="wh_infolink" onclick="openPage('help', this, 'green')" id="defaultinfoOpen"><i class="fa fa-phone"></i> HELP & SUPPORT</button>
+	<button class="wh_infolink" onclick="openPage('Contact', this, 'blue')"><i class="fa fa-map-marker-alt"></i> Location</button>
+	<button class="wh_infolink" onclick="openPage('About', this, 'orange')"><i class="fa fa-info"></i> About Us</button>
+
+
+
+	<div id="service" class="wh_infotabcontent wh_service_site">
+		<h3>We operate in many cities</h3>
+		<p>INDIA</p>
+
+
+		<span>Delhi NCR</span>
+		<span>Bangalore</span>
+		<span>Mumbai</span>
+		<span>Pune</span>
+		<span>Chennai</span>
+		<span>Hyderabad</span>
+		<span>Kolkata</span>
+
+	</div>
+
+	<div id="help" class="wh_infotabcontent" style="height: 20pc;">
+		<div style="float: left; padding-left: 20px;">
+			<h3>HELP & SUPPORT</h3>
+			<p><i class="fa fa-phone"></i> <a href="tel:+91-813-096-8130">+91-813-096-8130</a></p>
+			<p><i class="fa fa-phone"></i> <a href="tel:+91-844-855-8667">+91-844-855-8667</a></p>
+			<p><i class="fa fa-envelope"></i> <a href="mailto:support@whroom.in">support@whroom.in</a></p>
+			<p><i class="fa fa-map-marker-alt"></i> <a href="#">Gurugram, India</a></p>
+		</div>
+		<div style="float: left; padding-left: 100px;">
+			<h3>Let's keep in touch</h3>
+			<p><a href="https://www.instagram.com/whroom/" target="_blank"> <i class="fab fa-instagram "></i> instagram </a></p>
+			<p><a href="#"> <i class="fab fa-facebook-f"></i> facebook </a></p>
+			<p><a href="#"> <i class="fab fa-twitter"></i> twitter </a></p>
+			<p><a href="#"> <i class="fab fa-linkedin"></i> linkedin </a></p>
+		</div>
+		<div style="float: left; padding-left: 100px;">
+			<form class="wh_small_form">
+				<input type="number" name="" placeholder="Phone number">
+				<input type="submit" name="">
+			</form>
+
+		</div>
+
+		<div style="float: right; padding-left: 100px;">
+			<h6 style="width: 80%;">Scan this QR code to download app.</h6>
+			<img src="data/other_img/qr.svg" class="wh_bar_img">
+		</div>
+	</div>
+
+	<div id="Contact" class="wh_infotabcontent">
+
+		<iframe class="map"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224567.72022951694!2d76.82493501332394!3d28.423160293725946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1682284894123!5m2!1sen!2sin"
+				allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
+	<div id="About" class="wh_infotabcontent">
+		<h3>What Is Whroom?</h3>
+		<p>Whroom Is A Self Drive Car Rental Service That Provides You With All The Privacy, Fun And Convenience Of Your Own Car, Without The Hassles Of Owning And Maintaining One. We Drop And Pick-Up Cars From Your Doorstep, So That You Can Spend Time On The More Important Things. The Doorstep Drop And Pick-Up Of Cars Is Our Standard Way Of Serving You, And Is Available Throughout The Areas Served By Us In Your Own Prime Location Delhi/NCR And Gurugram.</p>
+
+		<h3>Am I Eligible To Use Whroom Services?</h3>
+		<p>To Avail Whroom's Services, You Must Be At Least 21 Years Old, And Your Driving License For "Light Motor Vehicles" Must Be At Least 2 Years Old ( At The Time Of Starting The Trip ). Driving License Printed On A4 Sheet Of Paper ( Original Or Otherwise ), Driving License On Digi Locker Or M-Parivaahan App And Commercial Driving Licenses Will Not Be Accepted.</p>
+
+		<h3>Why Whroom?</h3>
+		<p>One Must Never Stop Travelling, That's Why We Are Providing Our Customers Unlimited Kms With Every Booking. Also, Why You Need To Book For Full Day When You Can Rent For 8 Hours And Enjoy Your Ride. There Is Absolutely No Limit To The Kilometres That You Can Drive, And You Have Complete Flexibility Of Driving The Car As Much As You Want. Whroom Whroom It Up!</p>
+
+		<h3>Restrictions On Where To Travel?</h3>
+		<p>Interstate Taxes At The State Borders Are To Be Borne By The Customer. Our Cars Are Equipped With Fast Tag Devices For Your Convenience. The Toll Charges Incurred During Your Trip Will Be Billed To You In Your Invoice.</p>
+
+		<h3>Is Pickup And Drop Available?</h3>
+		<p>Yes, We Provide Pickup And Drop Service At Your Convenience Location. You May Also Choose Different Pickup Location. However, This Option Needs To Be Chosen While Making The Booking, Before Its Confirmed.</p>
+
+		<h3>What Is Corporate Discount?</h3>
+		<p>5% Corporate Discounts Are Available To The Customers Who Have ID Proof Of There Existing Company.</p>
+
+		<h3>What Kind Of Cars Can I Choose From?</h3>
+		<p>We Have Variety Of Cars From Which You Can Choose I.E., Hatchback, Sedan, SUV</p>
+
+	</div>
+
+
+	<button onclick="topFunction()" id="myBtn_top" title="Go to top"><i class="fas fa-angle-double-up"></i> </button>
+
+
+
+
+
+
 </body>
 
+
+
+<script>
+	// Get the modal
+	var modal = document.getElementById('wh_login');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+
+
+	function openlogin() {
+
+		document.getElementById("wh_sign").style.display = "none";
+		document.getElementById("wh_login").style.display = "block";
+
+
+
+
+	}
+
+
+	function closelogin_page() {
+		document.getElementById("wh_login").style.display = "none";
+
+
+	}
+
+	function closelogin() {
+
+		document.getElementById("wh_sign").style.display = "block";
+		document.getElementById("wh_login").style.display = "none";
+
+
+	}
+
+
+	function openchatform() {
+		document.getElementById("chatForm").style.display = "block";
+	}
+
+	function closechatform() {
+		document.getElementById("chatForm").style.display = "none";
+	}
+
+
+
+</script>
+
+
+
+<script>
+	var modal1 = document.getElementById('wh_sign');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function (te) {
+		if (te.target == modal1) {
+			modal1.style.display = "none";
+		}
+	}
+
+
+
+
+</script>
+
+
+
+<script>
+
+
+
+	function openNav() {
+		function whroomnav(w) {
+			if (w.matches) { // If media query matches
+				document.getElementById("wh_nav_icon").style.width = "270px";
+				document.getElementById("wh_nav_icon").style.display = "block";
+				document.getElementById("wh_nav_hid").style.display = "none";
+				document.getElementById("wh_nav_help_hid").style.display = "none";
+				document.getElementById("wh_nav_what_hid").style.display = "none";
+
+
+
+			} else {
+				document.getElementById("wh_nav_icon").style.width = "350px";
+				document.getElementById("wh_nav_icon").style.display = "block";
+				document.getElementById("wh_nav_hid").style.display = "none";
+				document.getElementById("wh_nav_help_hid").style.display = "none";
+				document.getElementById("wh_nav_what_hid").style.display = "none";
+
+
+			}
+		}
+
+		var w = window.matchMedia("(max-width: 600px)")
+		whroomnav(w) // Call listener function at run time
+		w.addListener(whroomnav) // Attach listener function on state changes
+	}
+
+	function closeNav() {
+		document.getElementById("wh_nav_icon").style.width = "0";
+		document.getElementById("wh_nav_icon").style.right = "5%";
+		document.getElementById("wh_nav_hid").style.display = "block";
+		document.getElementById("wh_nav_help_hid").style.display = "block";
+		document.getElementById("wh_nav_what_hid").style.display = "block";
+
+
+	}
+
+	function openNav2() {
+		document.getElementById("wh_Sidenav2").style.width = "250px";
+		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
+
+	function closeNav2() {
+		document.getElementById("wh_Sidenav2").style.width = "0";
+
+		document.body.style.backgroundColor = "white";
+	}
+</script>
+
+
+<script>
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>
+
+
+<script>
+	function openPage(pageName, elmnt, color) {
+		var i, tabcontent, tablinks;
+		tabcontent1 = document.getElementsByClassName("wh_infotabcontent");
+		for (i = 0; i < tabcontent1.length; i++) {
+			tabcontent1[i].style.display = "none";
+		}
+		tablinks1 = document.getElementsByClassName("wh_infolink");
+		for (i = 0; i < tablinks1.length; i++) {
+			tablinks1[i].style.backgroundColor = "";
+		}
+		document.getElementById(pageName).style.display = "block";
+		elmnt.style.backgroundColor = color;
+
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultinfoOpen").click();
+</script>
+
+
+
+<script>
+
+	const wrapper = document.querySelector(".wh_wrapper");
+	const carousel = document.querySelector(".wh_carousel");
+	const firstCardWidth = carousel.querySelector(".wh_card").offsetWidth;
+	const arrowBtns = document.querySelectorAll(".wh_arrow");
+	const carouselChildrens = [...carousel.children];
+
+	let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+	// Get the number of cards that can fit in the carousel at once
+	let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+	// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+	carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+		carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+	});
+
+	// Insert copies of the first few cards to end of carousel for infinite scrolling
+	carouselChildrens.slice(0, cardPerView).forEach(card => {
+		carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+	});
+
+	// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+	carousel.classList.add("no-transition");
+	carousel.scrollLeft = carousel.offsetWidth;
+	carousel.classList.remove("no-transition");
+
+	// Add event listeners for the arrow buttons to scroll the carousel left and right
+	arrowBtns.forEach(btn => {
+		btn.addEventListener("click", () => {
+			carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+		});
+	});
+
+	const dragStart = (e) => {
+		isDragging = true;
+		carousel.classList.add("dragging");
+		// Records the initial cursor and scroll position of the carousel
+		startX = e.pageX;
+		startScrollLeft = carousel.scrollLeft;
+	}
+
+	const dragging = (e) => {
+		if (!isDragging) return; // if isDragging is false return from here
+		// Updates the scroll position of the carousel based on the cursor movement
+		carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+	}
+
+	const dragStop = () => {
+		isDragging = false;
+		carousel.classList.remove("dragging");
+	}
+
+	const infiniteScroll = () => {
+		// If the carousel is at the beginning, scroll to the end
+		if (carousel.scrollLeft === 0) {
+			carousel.classList.add("no-transition");
+			carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+			carousel.classList.remove("no-transition");
+		}
+		// If the carousel is at the end, scroll to the beginning
+		else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+			carousel.classList.add("no-transition");
+			carousel.scrollLeft = carousel.offsetWidth;
+			carousel.classList.remove("no-transition");
+		}
+
+		// Clear existing timeout & start autoplay if mouse is not hovering over carousel
+		clearTimeout(timeoutId);
+		if (!wrapper.matches(":hover")) autoPlay();
+	}
+
+	const autoPlay = () => {
+		if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+		// Autoplay the carousel after every 2500 ms
+		timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 8000);
+	}
+	autoPlay();
+
+	carousel.addEventListener("mousedown", dragStart);
+	carousel.addEventListener("mousemove", dragging);
+	document.addEventListener("mouseup", dragStop);
+	carousel.addEventListener("scroll", infiniteScroll);
+	wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+	wrapper.addEventListener("mouseleave", autoPlay);
+</script>
+
+<script>
+	// Get the button
+	let mybutton = document.getElementById("myBtn_top");
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function () { scrollFunction() };
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+</script>
 </html>
