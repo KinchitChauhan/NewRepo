@@ -15,10 +15,10 @@ namespace WHRoom.DataAccessLayer
 
         }
 
-        public async Task<APIResponceModel> SubmitCustomerBooking(BookingCustomer request)
+        public async Task<Response> SubmitCustomerBooking(BookingCustomer request)
         {
-            APIResponceModel response = new APIResponceModel();
-            response.success = "SuccessFul";
+            Response response = new Response();
+            response.res = "SuccessFul";
             try
             {
                 
@@ -47,12 +47,13 @@ namespace WHRoom.DataAccessLayer
                     if (Status <= 0)
                     {
                        
-                        response.success = "Error--Register Query Not Executed";
+                        response.res = "Error--Register Query Not Executed";
                         return response;
                     }
                     else
                     {
-                        response.success = "Succesfully added";
+
+                        response.res = "Succesfully added";
                         return response;
                     }
                 }
@@ -61,7 +62,7 @@ namespace WHRoom.DataAccessLayer
             catch (Exception ex)
             {
               
-                response.success = ex.Message;
+                response.res = ex.Message;
             }
             finally
             {

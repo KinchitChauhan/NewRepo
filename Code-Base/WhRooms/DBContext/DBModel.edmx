@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WHRoomDevModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'WHRoomDev.dbo.Booking_customer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Booking_customer">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Contact" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Contact" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Aadhar" Type="varchar" MaxLength="255" />
+          <Property Name="Driving_Licence" Type="varchar" MaxLength="255" />
+          <Property Name="Booking_DateTime" Type="varchar" MaxLength="255" />
+          <Property Name="Retrun_DateTime" Type="varchar" MaxLength="255" />
+          <Property Name="Car_Segments" Type="int" />
+          <Property Name="Hatchback" Type="int" />
+          <Property Name="SUV" Type="int" />
+          <Property Name="Sedan" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'WHRoomDev.dbo.bookings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="bookings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Tbl_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="EmailVerification" Type="bit" />
+          <Property Name="ActivetionCode" Type="uniqueidentifier" />
+          <Property Name="OTP" Type="nvarchar" MaxLength="4" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'WHRoomDev.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar(max)" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="Password" Type="varchar(max)" />
+          <Property Name="ConfirmPassword" Type="varchar(max)" />
+          <Property Name="Address" Type="varchar(max)" />
+          <Property Name="PhoneNumber" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="InsertDateTime" Type="varchar(max)" />
+          <Property Name="MachineName" Type="varchar(max)" />
+          <Property Name="UserType" Type="varchar(max)" />
+          <Property Name="Token" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'WHRoomDev.dbo.UsersOtp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="UsersOtp">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="OTP" />
+            <PropertyRef Name="Token" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="OTP" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Token" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <Function Name="addbookings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Contact" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Aadhar" Type="varchar" Mode="In" />
+          <Parameter Name="Driving_Licence" Type="varchar" Mode="In" />
+          <Parameter Name="Booking_DateTime" Type="varchar" Mode="In" />
+          <Parameter Name="Retrun_DateTime" Type="varchar" Mode="In" />
+          <Parameter Name="Car_Segments" Type="int" Mode="In" />
+          <Parameter Name="Hatchback" Type="int" Mode="In" />
+          <Parameter Name="SUV" Type="int" Mode="In" />
+          <Parameter Name="Sedan" Type="int" Mode="In" />
+        </Function>
+        <Function Name="addUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserName" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Email" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Password" Type="varchar(max)" Mode="In" />
+          <Parameter Name="ConfirmPassword" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Address" Type="varchar(max)" Mode="In" />
+          <Parameter Name="PhoneNumber" Type="int" Mode="In" />
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+          <Parameter Name="IsDelete" Type="bit" Mode="In" />
+          <Parameter Name="InsertDateTime" Type="varchar(max)" Mode="In" />
+          <Parameter Name="MachineName" Type="varchar(max)" Mode="In" />
+          <Parameter Name="UserType" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Token" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="addUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserName" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Email" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Password" Type="varchar(max)" Mode="In" />
+          <Parameter Name="ConfirmPassword" Type="varchar(max)" Mode="In" />
+          <Parameter Name="MachineName" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="checkUserOtp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar(max)" Mode="In" />
+          <Parameter Name="OTP" Type="varchar(max)" Mode="In" />
+          <Parameter Name="otpout" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="getPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Password" Type="varchar(max)" Mode="In" />
+          <Parameter Name="out" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="otpGenerateSave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar(max)" Mode="In" />
+          <Parameter Name="OTP" Type="varchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="WHRoomDevModelStoreContainer">
+          <EntitySet Name="Tbl_Users" EntityType="Self.Tbl_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Booking_customer" EntityType="Self.Booking_customer" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Booking_customer].[ID] AS [ID], 
+    [Booking_customer].[Name] AS [Name], 
+    [Booking_customer].[Contact] AS [Contact], 
+    [Booking_customer].[Email] AS [Email], 
+    [Booking_customer].[Aadhar] AS [Aadhar], 
+    [Booking_customer].[Driving_Licence] AS [Driving_Licence], 
+    [Booking_customer].[Booking_DateTime] AS [Booking_DateTime], 
+    [Booking_customer].[Retrun_DateTime] AS [Retrun_DateTime], 
+    [Booking_customer].[Car_Segments] AS [Car_Segments], 
+    [Booking_customer].[Hatchback] AS [Hatchback], 
+    [Booking_customer].[SUV] AS [SUV], 
+    [Booking_customer].[Sedan] AS [Sedan]
+    FROM [dbo].[Booking_customer] AS [Booking_customer]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="bookings" EntityType="Self.bookings" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [bookings].[ID] AS [ID], 
+    [bookings].[Name] AS [Name], 
+    [bookings].[Address] AS [Address], 
+    [bookings].[City] AS [City]
+    FROM [dbo].[bookings] AS [bookings]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Users].[ID] AS [ID], 
+    [Users].[UserName] AS [UserName], 
+    [Users].[Email] AS [Email], 
+    [Users].[Password] AS [Password], 
+    [Users].[ConfirmPassword] AS [ConfirmPassword], 
+    [Users].[Address] AS [Address], 
+    [Users].[PhoneNumber] AS [PhoneNumber], 
+    [Users].[IsActive] AS [IsActive], 
+    [Users].[IsDelete] AS [IsDelete], 
+    [Users].[InsertDateTime] AS [InsertDateTime], 
+    [Users].[MachineName] AS [MachineName], 
+    [Users].[UserType] AS [UserType], 
+    [Users].[Token] AS [Token]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UsersOtp" EntityType="Self.UsersOtp" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UsersOtp].[ID] AS [ID], 
+    [UsersOtp].[Email] AS [Email], 
+    [UsersOtp].[OTP] AS [OTP], 
+    [UsersOtp].[Token] AS [Token]
+    FROM [dbo].[UsersOtp] AS [UsersOtp]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WHRoomDevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tbl_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailVerification" Type="Boolean" />
+          <Property Name="ActivetionCode" Type="Guid" />
+          <Property Name="OTP" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Booking_customer">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Contact" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contact" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Aadhar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Driving_Licence" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Booking_DateTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Retrun_DateTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Car_Segments" Type="Int32" />
+          <Property Name="Hatchback" Type="Int32" />
+          <Property Name="SUV" Type="Int32" />
+          <Property Name="Sedan" Type="Int32" />
+        </EntityType>
+        <EntityType Name="booking">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ConfirmPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="InsertDateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MachineName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UsersOtp">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="OTP" />
+            <PropertyRef Name="Token" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OTP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Token" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="WHRoomDevEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_Users" EntityType="Self.Tbl_Users" />
+          <EntitySet Name="Booking_customer" EntityType="Self.Booking_customer" />
+          <EntitySet Name="bookings" EntityType="Self.booking" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UsersOtps" EntityType="Self.UsersOtp" />
+          <FunctionImport Name="addbookings">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Contact" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Aadhar" Mode="In" Type="String" />
+            <Parameter Name="Driving_Licence" Mode="In" Type="String" />
+            <Parameter Name="Booking_DateTime" Mode="In" Type="String" />
+            <Parameter Name="Retrun_DateTime" Mode="In" Type="String" />
+            <Parameter Name="Car_Segments" Mode="In" Type="Int32" />
+            <Parameter Name="Hatchback" Mode="In" Type="Int32" />
+            <Parameter Name="SUV" Mode="In" Type="Int32" />
+            <Parameter Name="Sedan" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="addUser">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="ConfirmPassword" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+            <Parameter Name="PhoneNumber" Mode="In" Type="Int32" />
+            <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+            <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+            <Parameter Name="InsertDateTime" Mode="In" Type="String" />
+            <Parameter Name="MachineName" Mode="In" Type="String" />
+            <Parameter Name="UserType" Mode="In" Type="String" />
+            <Parameter Name="Token" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="addUsers" ReturnType="Collection(Int32)">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="ConfirmPassword" Mode="In" Type="String" />
+            <Parameter Name="MachineName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="checkUserOtp" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="OTP" Mode="In" Type="String" />
+            <Parameter Name="otpout" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getPassword" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="out" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="otpGenerateSave">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="OTP" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WHRoomDevModelStoreContainer" CdmEntityContainer="WHRoomDevEntities">
+          <EntitySetMapping Name="Tbl_Users">
+            <EntityTypeMapping TypeName="WHRoomDevModel.Tbl_Users">
+              <MappingFragment StoreEntitySet="Tbl_Users">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="EmailVerification" ColumnName="EmailVerification" />
+                <ScalarProperty Name="ActivetionCode" ColumnName="ActivetionCode" />
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Booking_customer">
+            <EntityTypeMapping TypeName="WHRoomDevModel.Booking_customer">
+              <MappingFragment StoreEntitySet="Booking_customer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Aadhar" ColumnName="Aadhar" />
+                <ScalarProperty Name="Driving_Licence" ColumnName="Driving_Licence" />
+                <ScalarProperty Name="Booking_DateTime" ColumnName="Booking_DateTime" />
+                <ScalarProperty Name="Retrun_DateTime" ColumnName="Retrun_DateTime" />
+                <ScalarProperty Name="Car_Segments" ColumnName="Car_Segments" />
+                <ScalarProperty Name="Hatchback" ColumnName="Hatchback" />
+                <ScalarProperty Name="SUV" ColumnName="SUV" />
+                <ScalarProperty Name="Sedan" ColumnName="Sedan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bookings">
+            <EntityTypeMapping TypeName="WHRoomDevModel.booking">
+              <MappingFragment StoreEntitySet="bookings">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="WHRoomDevModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="InsertDateTime" ColumnName="InsertDateTime" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersOtps">
+            <EntityTypeMapping TypeName="WHRoomDevModel.UsersOtp">
+              <MappingFragment StoreEntitySet="UsersOtp">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="addbookings" FunctionName="WHRoomDevModel.Store.addbookings" />
+          <FunctionImportMapping FunctionImportName="addUser" FunctionName="WHRoomDevModel.Store.addUser" />
+          <FunctionImportMapping FunctionImportName="addUsers" FunctionName="WHRoomDevModel.Store.addUsers" />
+          <FunctionImportMapping FunctionImportName="checkUserOtp" FunctionName="WHRoomDevModel.Store.checkUserOtp" />
+          <FunctionImportMapping FunctionImportName="getPassword" FunctionName="WHRoomDevModel.Store.getPassword" />
+          <FunctionImportMapping FunctionImportName="otpGenerateSave" FunctionName="WHRoomDevModel.Store.otpGenerateSave" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

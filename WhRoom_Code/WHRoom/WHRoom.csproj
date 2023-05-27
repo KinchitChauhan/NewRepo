@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\data\other_img\header_img.png" />
+    <Content Remove="wwwroot\js\HomeBooking.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,15 +31,11 @@
     <None Include="wwwroot\data\other_img\black_auto.png" />
     <None Include="wwwroot\data\other_img\book.jpg" />
     <None Include="wwwroot\data\other_img\book_now.svg" />
-    <None Include="wwwroot\data\other_img\brezza1.avif" />
     <None Include="wwwroot\data\other_img\car3.jpg" />
     <None Include="wwwroot\data\other_img\car_img.jpg" />
-    <None Include="wwwroot\data\other_img\ertiga.avif" />
     <None Include="wwwroot\data\other_img\facebook.svg" />
     <None Include="wwwroot\data\other_img\google-pay.svg" />
     <None Include="wwwroot\data\other_img\google.svg" />
-    <None Include="wwwroot\data\other_img\grand i10 Nios.avif" />
-    <None Include="wwwroot\data\other_img\grand_i10.avif" />
     <None Include="wwwroot\data\other_img\header_img.png" />
     <None Include="wwwroot\data\other_img\logo.svg" />
     <None Include="wwwroot\data\other_img\logo_img5.png" />
@@ -51,25 +48,31 @@
     <None Include="wwwroot\data\other_img\qr.svg" />
     <None Include="wwwroot\data\other_img\services.svg" />
     <None Include="wwwroot\data\other_img\star1.png" />
-    <None Include="wwwroot\data\other_img\swift.avif" />
-    <None Include="wwwroot\data\other_img\swift_dzire.avif" />
-    <None Include="wwwroot\data\other_img\tiago_tata.avif" />
     <None Include="wwwroot\data\other_img\twitter.svg" />
     <None Include="wwwroot\data\other_img\visa.svg" />
     <None Include="wwwroot\data\other_img\what1.png" />
     <None Include="wwwroot\data\other_img\wh_reg.html" />
+    <None Include="wwwroot\js\HomeBooking.js" />
     <None Include="wwwroot\js\Booking.js" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+    <PackageReference Include="Nexmo.Csharp.Client" Version="5.2.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Vonage" Version="6.3.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Content\Images\data\logo\" />
-    <Folder Include="wwwroot\NewFolder\" />
+    <Folder Include="Content\" />
   </ItemGroup>
 
 </Project>

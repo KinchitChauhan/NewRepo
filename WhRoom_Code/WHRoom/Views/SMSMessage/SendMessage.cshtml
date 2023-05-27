@@ -1,0 +1,51 @@
+﻿@model WHRoom.Models.Message 
+
+@{  
+    ViewBag.Title = "SendMessage";  
+}  
+
+<h2>Send Message</h2>  
+
+@using (Html.BeginForm())
+{  
+    @Html.AntiForgeryToken()  
+
+        <div class="form-horizontal">  
+            <h4>Message</h4>  
+            <hr />  
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })  
+            <div class="form-group">  
+            @Html.LabelFor(model => model.To, htmlAttributes: new { @class = "control-label col-md-2" })  
+                <div class="col-md-10">  
+                @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control" } })  
+                @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })  
+                </div>  
+            </div>  
+
+            <div class="form-group">  
+            @Html.LabelFor(model => model.ContentMsg, htmlAttributes: new { @class = "control-label col-md-2" })  
+                <div class="col-md-10">  
+                @Html.EditorFor(model => model.ContentMsg, new { htmlAttributes = new { @class = "form-control" } })  
+                @Html.ValidationMessageFor(model => model.ContentMsg, "", new { @class = "text-danger" })  
+                </div>  
+            </div>  
+          
+            <br>
+
+            <div class="form-group">  
+                <div class="col-md-offset-2 col-md-10">
+
+                <button type="submit" class="btn btn-primary" value="Send SMS">Send SMS</button>
+                </div>  
+            </div>
+        <div class="form-group">
+            <strong>@Html.DisplayFor(m => m.Result)</strong><br />
+           
+        </div>
+        </div>  
+}  
+
+<div>  
+    @Html.ActionLink("Back to List", "Index")  
+</div>  
+

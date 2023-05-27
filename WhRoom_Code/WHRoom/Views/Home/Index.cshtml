@@ -1,12 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<title>Rent Self Drive Car | Whroom</title>
-
 	<link rel="icon" href="data/logo/logo.svg" type="image/icon type">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,22 +12,16 @@
 	<link rel="stylesheet" href="css/style_all.css">
 	
 </head>
-
-
 <body>
 	<nav class="wh_top">
 		<div class="wh_back_img"></div>
 		<div class="wh_nav_data1"><img src="data/logo/logo.svg"></div>
-		 <img src="img/brezza1.avif" alt="">
+		<img src="img/brezza1.avif" alt="">
 		<div class="wh_bg_text">
 			<h2>Drive Like Your Own</h2>
-
 			<h1 style="font-size:50px">Never Stop Living</h1>
 			<button class="wh_btn1" onclick="document.getElementById('wh_login').style.display='block'">Login</button>
 		</div>
-
-
-
 		<div id="find_car" class="wh_find_modal">
 			<div class="wh_find_modal-content wh_find_animate">
 				<span onclick="document.getElementById('find_car').style.display='none'" class="close_find_page" title="Close Modal">&times;</span>
@@ -38,37 +30,28 @@
 					<input type="text" placeholder="Search.." name="search2">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
-
 			</div>
-
-
 		</div>
-
-
-
-
 		<div class="wh_nav_content" id="wh_nav_icon">
 			<i class="fa fa-close" onclick="closeNav()"></i>
 			<i class="fas fa-user-alt" style="color: orangered;"></i>
 			<i class="fas fa-map-marked-alt" style="color: lightgreen;"></i>
 			<i class="fa fa-language" style="color: blue;"></i>
-
 			<i class="fas fa-angle-double-down down_arrow_nav" onclick="openNav2()"></i>
 		</div>
-
 		<div id="wh_Sidenav2" class="wh_sidenav">
 			<a href="javascript:void(0)" class="wh_closebtn" onclick="closeNav2()">&times;</a>
 			<a href="#"><i class="fas fa-home"></i> Home</a>
 			<a href="#"><i class="fas fa-car"></i> Cars</a>
-			<a href="#"><i class="fas fa-bookmark"></i> Booknow</a>
+			<a href="/Booking/Index"><i class="fas fa-bookmark"></i> Booknow</a>
+			<a href="/SendMailer/Index"><i class="fas fa-bookmark"></i> send</a>
+			<a href="/SMSMessage/SendMessage"><i class="fas fa-bookmark"></i> sms</a>
+			<a href="/Auth/Signup"><i class="fas fa-bookmark"></i> signUp</a>
+			<a href="/Auth/Login"><i class="fas fa-bookmark"></i> Login</a>
 			<a href="#"><i class="fas fa-th-large"></i> Services</a>
 			<a href="#"><i class="fas fa-info"></i> FAQ</a>
 		</div>
-
-
-
 		<div class="wh_nav_whatapp" id="wh_nav_what_hid"><a href="https://wa.me/+918448558667?text=I'm%20interested%20in%20your%20car%20for%20rent"><img src="data/other_img/what1.png"></a></div>
-
 		<div class="wh_help_dropdown wh_nav_help" id="wh_nav_help_hid">
 			<button class="wh_help_dropbtn"><i class="fas fa-info"> </i>Help</button>
 			<div class="wh_help_dropdown-content">
@@ -77,22 +60,15 @@
 				<a href="#help" style="text-align: center;">More</a>
 			</div>
 		</div>
-
-
 		<div class="wh_nav_open" id="wh_nav_hid" onclick="openNav()">☰</div>
 	</nav>
-
-
-
 	<div id="wh_login" class="wh_login_modal">
 		<div class="wh_modal_content wh_animate">
-
 			<div class="wh_imgcontainer">
 				<span onclick="document.getElementById('wh_login').style.display='none'" class="close_login_page" title="Close Modal">&times;</span>
 				<!--uncomment this line if we use user image icon -->
 				<!--<img src="img_avatar2.png" alt="Avatar" class="wh_login_img"> -->
 				<i class="fas fa-user-alt wh_login_img"></i>
-
 				<div class="form_content_login">
 					<div class="wh_login_base1">
 						<div class="wh_login_cont">
@@ -107,30 +83,21 @@
 							<i class="fa fa-envelope wh_form_icon"></i>
 							<input class="wh_form_input_field" type="text" placeholder="Email" name="email">
 						</div>
-
 						<div class="wh_form_input_container">
 							<i class="fa fa-key wh_form_icon"></i>
 							<input class="wh_form_input_field" type="password" placeholder="Password" name="psw">
 						</div>
-
 						<button type="submit" class="wh_form_btn">Login</button>
-
 						<div class="wh_form_input_container">
 							<img src="data/other_img/google.svg" class="wh_social_link">
 							<img src="data/other_img/facebook.svg" class="wh_social_link">
 							<img src="data/other_img/twitter.svg" class="wh_social_link">
 						</div>
 					</form>
-
-
 				</div>
-
 			</div>
-
 		</div>
 	</div>
-
-
 	<div id="wh_sign" class="wh_sing_modal">
 		<div class="wh_modal_content wh_animate">
 			<div class="wh_imgcontainer">
@@ -155,35 +122,18 @@
 							<input class="wh_inp" type="text" placeholder="Email">
 							<input class="wh_inp" type="text" placeholder="Password">
 							<input class="wh_inp" type="text" placeholder="address">
-
-
 							<input class="wh_inp_btn" type="submit" value="submit">
 						</div>
-
-
 						<div class="wh_form_input_container" style="position: relative; left:8%">
-
 							<img src="data/other_img/google.svg" class="wh_social_link">
 							<img src="data/other_img/facebook.svg" class="wh_social_link">
 							<img src="data/other_img/twitter.svg" class="wh_social_link">
 						</div>
-
-
-
-
 					</form>
-
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
 	<div class="tab" hidden>
 		<button class="tablinks wh_opt1" onclick="openCity(event, 'all')" id="defaultOpen">☰</button>
 		<button class="tablinks wh_opt2" onclick="openCity(event, 'road')"><i class="fa fa-road"></i></button>
@@ -192,15 +142,11 @@
 		<button class="tablinks wh_opt5" onclick="openCity(event, 'cruise')"><i class='fa fa-tachometer'></i></button>
 		<button class="tablinks wh_opt6" onclick="openCity(event, 'luxury')"><i class='fa fa-thumbs-up'></i></button>
 	</div>
-
 	<h1 class="wh_head_word">Cars Available</h1>
-
 	<div class="wh_card_head tabcontent" id="all">
 		<div class="wh_wrapper">
 			<i id="left" class="fa-solid fa-angle-left wh_arrow"></i>
 			<ul class="wh_carousel">
-
-
 				<li class="wh_card">
 					<img src="data/other_img/nexon1.jpg" alt="Error">
 					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
@@ -210,14 +156,12 @@
 						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
 					</p>
 					<hr>
-					<p class="wh_card_link_opt wh_hide">Available from 14 May <a href=""><i class="fas fa-map-marker-alt"></i> bangalore</a> </p>
-					<p class="wh_tagline">Safe Drive With Whroom</p>
+				
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
 				</li>
-
-
-
 				<li class="wh_card">
-					<img src="data/other_img/brezza1.avif" alt="Error">
+
+					<img src="~/data/other_img/brezz.jpg" alt="Error">
 					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
 					<h4>Breeza<sup>Maruti</sup></h4>
 					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
@@ -225,14 +169,12 @@
 						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
 					</p>
 					<hr>
-					<p class="wh_card_link_opt wh_hide">Available from 14 May <a href=""><i class="fas fa-map-marker-alt"></i> bangalore</a> </p>
-					<p class="wh_tagline">Safe Drive With Whroom</p>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
 
 				</li>
-
-
 				<li class="wh_card">
-					<img src="data/other_img/grand_i10.avif" alt="Error">
+					<img src="data/other_img/i10.jpg" alt="Error">
 					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
 					<h4>Grand i10<sup>Hyundai</sup></h4>
 					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
@@ -240,19 +182,106 @@
 						<span> Petrol</span> <span> Manual</span> <span> 4 Seats</span>
 					</p>
 					<hr>
-					<p class="wh_card_link_opt wh_hide">Available from 14 May <a href=""><i class="fas fa-map-marker-alt"></i> Delhi</a> </p>
-					<p class="wh_tagline">Safe Drive With Whroom</p>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
 
 				</li>
+				<li class="wh_card">
+					<img src="data/other_img/nexon1.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Nexon<sup>TATA</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+				</li>
+				<li class="wh_card">
+
+					<img src="~/data/other_img/brezz.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Breeza<sup>Maruti</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+
+				</li>
+				<li class="wh_card">
+					<img src="data/other_img/i10.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Grand i10<sup>Hyundai</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 4 Seats</span>
+					</p>
+					<hr>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+
+				</li>
+				<li class="wh_card">
+					<img src="data/other_img/nexon1.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Nexon<sup>TATA</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+				</li>
+				<li class="wh_card">
+
+					<img src="~/data/other_img/brezz.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Breeza<sup>Maruti</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+
+				</li>
+				<li class="wh_card">
+					<img src="data/other_img/i10.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Grand i10<sup>Hyundai</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 4 Seats</span>
+					</p>
+					<hr>
+					
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+
+
+				</li>
+				<li class="wh_card">
+					<img src="data/other_img/nexon1.jpg" alt="Error">
+					<b class="wh_hide"><i class="fas fa-star wh_star_card"></i> 3.4</b>
+					<h4>Nexon<sup>TATA</sup></h4>
+					<p class="wh_price"><b>500</b>/hr<sub>*</sub> <s>800</s></p>
+					<p class="wh_txt_cont">
+						<span> Petrol</span> <span> Manual</span> <span> 5 Seats</span>
+					</p>
+					<hr>
+				
+					<a href="/Booking/Index" type="submit" class="wh_form_btn" id="BtnbookCar">Book Now</a>
+				</li>
+
 			</ul>
 			<i id="right" class="fa-solid fa-angle-right wh_arrow"></i>
 		</div>
 	</div>
-
-
-
-
-
 	<div id="road" class="tabcontent" hidden>
 		<h3>Road Trip</h3>
 
@@ -273,11 +302,7 @@
 		<h3>Luxury Car</h3>
 
 	</div>
-
-
-
 	<section class="icons-container" id="services">
-
 		<div class="icon">
 			<i class="fas fa-home"></i>
 			<div class="content">
@@ -285,7 +310,6 @@
 				<p>on-time doorstep service at your location</p>
 			</div>
 		</div>
-
 		<div class="icon">
 			<i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>
 			<div class="content">
@@ -501,10 +525,13 @@
 
 
 </body>
-
-
-
 <script>
+
+
+
+
+
+
 	// Get the modal
 	var modal = document.getElementById('wh_login');
 
@@ -552,11 +579,11 @@
 
 
 
-</script>
 
 
 
-<script>
+
+
 	var modal1 = document.getElementById('wh_sign');
 
 	// When the user clicks anywhere outside of the modal, close it
@@ -569,11 +596,11 @@
 
 
 
-</script>
 
 
 
-<script>
+
+
 
 
 
@@ -624,10 +651,10 @@
 
 		document.body.style.backgroundColor = "white";
 	}
-</script>
 
 
-<script>
+
+
 	function openCity(evt, cityName) {
 		var i, tabcontent, tablinks;
 		tabcontent = document.getElementsByClassName("tabcontent");
@@ -644,10 +671,10 @@
 
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
-</script>
 
 
-<script>
+
+
 	function openPage(pageName, elmnt, color) {
 		var i, tabcontent, tablinks;
 		tabcontent1 = document.getElementsByClassName("wh_infotabcontent");
@@ -665,11 +692,11 @@
 
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultinfoOpen").click();
-</script>
 
 
 
-<script>
+
+
 
 	const wrapper = document.querySelector(".wh_wrapper");
 	const carousel = document.querySelector(".wh_carousel");
@@ -755,9 +782,9 @@
 	carousel.addEventListener("scroll", infiniteScroll);
 	wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 	wrapper.addEventListener("mouseleave", autoPlay);
-</script>
 
-<script>
+
+
 	// Get the button
 	let mybutton = document.getElementById("myBtn_top");
 
@@ -777,5 +804,6 @@
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 	}
+
 </script>
 </html>

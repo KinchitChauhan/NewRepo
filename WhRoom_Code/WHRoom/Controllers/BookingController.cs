@@ -18,10 +18,11 @@ namespace WHRoom.Controllers
             return View();
         }
         
+
         [HttpPost]
         public async Task<IActionResult> SubmitCustomerBooking(BookingCustomer request)
         {
-            APIResponceModel response = new APIResponceModel();
+            Response response = new Response();
             try
             {
                 response=await _bookingDataAccess.SubmitCustomerBooking(request);

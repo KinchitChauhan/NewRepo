@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WHRoom.Models;
+using WHRoom.Models.Auth;
 
 namespace WHRoom.DataAccessLayer
 {
     public interface IBookingDataAccess
     {
-        public  Task<APIResponceModel> SubmitCustomerBooking(BookingCustomer request);
+        public Task<Response> SubmitCustomerBooking(BookingCustomer request);
+       
 
      
     }
